@@ -4,10 +4,10 @@ $(document).ready(function() {
   // listen for save button clicks
   $(".saveBtn").on("click", function() {
 
-    // sets variable "value"
+    // sets variable "value" for all siblings of "description" class. Pulls value from input.
     var value = $(this).siblings(".description").val();
 
-    //  sets variable "time"
+    // sets variable "time" for the parent of the input, in this case the time id
     var time = $(this).parent().attr("id");
 
     // saves time and value in localStorage
@@ -16,35 +16,44 @@ $(document).ready(function() {
 
   // creates function hourUpdater
   function hourUpdater() {
-    // get current number of hours
+    // get current number of hours "moment()" references the moment.js
     var currentHour = moment().hours();
 
-    // loop over time blocks
+    // sets variable for blockHour. loop over time blocks.
     $(".time-block").each(function() {
+      // parseInt breaks apart the items in this look, adds attribute "id" and splits the array
       var blockHour = parseInt($(this).attr("id").split("-")[1]);
 
-      // check if we've moved past this time
+      // check if we've moved past this time, if so add "past" class
       if (blockHour < currentHour) {
         $(this).addClass("past");
       } 
+      // check if time is strictly equal to the current time
       else if (blockHour === currentHour) {
+        // remove "past" class
         $(this).removeClass("past");
+        // add "present" class
         $(this).addClass("present");
       } 
+      // check if time !== the current time or past time
       else {
+        // remove "past" class
         $(this).removeClass("past");
+        // remove "present" class
         $(this).removeClass("present");
+        // add "future" class
         $(this).addClass("future");
       }
     });
   }
 
+  // calls hourUpdater function 
   hourUpdater();
 
-  // set up interval to check if current time needs to be updated
+  // set up interval to check if current time needs to be updated, looks like every 15 seconds
   var interval = setInterval(hourUpdater, 15000);
 
-  // load any saved data from localStorage
+  // loads the specified item that was "saved" from localStorage
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
   $("#hour-10 .description").val(localStorage.getItem("hour-10"));
   $("#hour-11 .description").val(localStorage.getItem("hour-11"));

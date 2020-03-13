@@ -78,6 +78,6 @@ textarea{
 
 /* this is a pseudo element that changes the color of the save button when the cursor hovers over it */
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 30px;
   transition: all .3s ease-in-out;
 }

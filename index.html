@@ -2,33 +2,47 @@
 <!DOCTYPE html>
 <!-- this defines language English -->
 <html lang="en">
-<!-- Head Tag -->
+
 <head>
   <!-- This is the character set, set as UTF-8 in the US, designed by Ken Thompson and Rob Pike -->
   <meta charset="UTF-8">
-  
+  <!-- set size by device -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- for Microsoft Edge, still can't believe they are hanging on -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- link to bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- link to fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- link to google api -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- link to local stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <!-- Page title, displays on tab -->
   <title>Work Day Scheduler</title>
 </head>
 
 <body>
+  <!-- Jumbotron Bootstrap -->
   <header class="jumbotron">
+    <!-- Main title info -->
     <h1 class="display-3">Work Day Scheduler</h1>
+    <!-- Secondary Title info -->
     <p class="lead">A simple calendar app for scheduling your work day</p>
+    <!-- tagged to interact with moment() and display current date in weekday, month, date format -->
     <p id="currentDay" class="lead"></p>
   </header>
+  <!-- Beginning of container for hour text areas-->
   <div class="container">
     <div id="hour-9" class="row time-block">
+      <!-- Time on left side of screen -->
       <div class="col-md-1 hour">
         9AM
       </div>
+      <!-- input text here for scheduling -->
       <textarea class="col-md-10 description">
       </textarea>
+      <!-- save button on right side of screen -->
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
     <div id="hour-10" class="row time-block">
@@ -95,10 +109,10 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
-
+    <!-- jquery link and moment link -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
+    <!-- link to local script.js -->
     <script src="script.js"></script>
 </body>
 
