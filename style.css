@@ -1,6 +1,7 @@
 /* overall font and font size for body text */
 body {
   font-family: 'Open Sans', sans-serif;
+  background-image: url("https://samsilcox.files.wordpress.com/2015/11/tiled-metal.png");
   font-size: 16px;
   line-height: 1;
 }
@@ -19,20 +20,20 @@ textarea{
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
+  color: whitesmoke;
 }
 
 /* this makes the textarea wrap inside the element */
 .description{
   white-space: pre-wrap;
+  background-color:transparent;
 }
 
 /* this sets alignment and border for time on left side of screen */
 .time-block{
   text-align: center;
   border-radius: 15px;
+  background-color:transparent;
 }
 
 /* this sets the height, text wrapping, border on the calendar inputs */
@@ -44,26 +45,28 @@ textarea{
 
 /* this sets the background color text color and border for the time slots */
 .hour {
-  background-color: #ffffff;
+  background-color: #ffffffa2;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   color: #000000;
   border-top: 1px dashed #000000;
 }
 
 /* this colors any calender input that is less than the current time */
 .past {
-  background-color: #d3d3d3;
+  background-color: rgba(0, 0, 0, 0.425);
   color: white;
 }
 
 /* this colors any calendar input that is equal to the current time */
 .present {
-  background-color: #ff6961;
+  background-color: #ff6961a8;
   color: white;
 }
 
 /* this colors any calendar input that is greater than the current time  */
 .future {
-  background-color: #77dd77;
+  background-color: #77dd77af;
   color: white;
 }
 
@@ -80,4 +83,10 @@ textarea{
 .saveBtn i:hover {
   font-size: 30px;
   transition: all .3s ease-in-out;
+}
+
+/* this changes the size and weight of the items in class lead */
+.lead {
+  font-weight: bolder;
+  font-size: 25px;
 }

@@ -54,6 +54,15 @@ $(document).ready(function() {
   var interval = setInterval(hourUpdater, 15000);
 
   // loads the specified item that was "saved" from localStorage
+  $("#hour-0 .description").val(localStorage.getItem("hour-0"));
+  $("#hour-1 .description").val(localStorage.getItem("hour-1"));
+  $("#hour-2 .description").val(localStorage.getItem("hour-2"));
+  $("#hour-3 .description").val(localStorage.getItem("hour-3"));
+  $("#hour-4 .description").val(localStorage.getItem("hour-4"));
+  $("#hour-5 .description").val(localStorage.getItem("hour-5"));
+  $("#hour-6 .description").val(localStorage.getItem("hour-6"));
+  $("#hour-7 .description").val(localStorage.getItem("hour-7"));
+  $("#hour-8 .description").val(localStorage.getItem("hour-8"));
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
   $("#hour-10 .description").val(localStorage.getItem("hour-10"));
   $("#hour-11 .description").val(localStorage.getItem("hour-11"));
@@ -67,7 +76,8 @@ $(document).ready(function() {
   $("#hour-19 .description").val(localStorage.getItem("hour-19"));
   $("#hour-20 .description").val(localStorage.getItem("hour-20"));
   $("#hour-21 .description").val(localStorage.getItem("hour-21"));
-  $("#hour-22 .description").val(localStorage.getItem("hour-23"));
+  $("#hour-22 .description").val(localStorage.getItem("hour-22"));
+  $("#hour-23 .description").val(localStorage.getItem("hour-23"));
 
   // display current day on page
   $("#currentDay").text(moment().format("dddd, MMMM Do"));
