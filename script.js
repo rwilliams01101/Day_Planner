@@ -4,7 +4,7 @@ $(document).ready(function() {
   // listen for save button clicks
   $(".saveBtn").on("click", function() {
 
-    // sets variable "value" for all siblings of "description" class. Pulls value from input.
+    // sets variable "value" for all siblings of "description" class. Pulls value from input
     var value = $(this).siblings(".description").val();
 
     // sets variable "time" for the parent of the input, in this case the time id
@@ -63,6 +63,11 @@ $(document).ready(function() {
   $("#hour-15 .description").val(localStorage.getItem("hour-15"));
   $("#hour-16 .description").val(localStorage.getItem("hour-16"));
   $("#hour-17 .description").val(localStorage.getItem("hour-17"));
+  $("#hour-18 .description").val(localStorage.getItem("hour-18"));
+  $("#hour-19 .description").val(localStorage.getItem("hour-19"));
+  $("#hour-20 .description").val(localStorage.getItem("hour-20"));
+  $("#hour-21 .description").val(localStorage.getItem("hour-21"));
+  $("#hour-22 .description").val(localStorage.getItem("hour-23"));
 
   // display current day on page
   $("#currentDay").text(moment().format("dddd, MMMM Do"));
