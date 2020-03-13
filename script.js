@@ -1,6 +1,8 @@
 // this waits for the page to load before starting to run the script
 $(document).ready(function() {
 
+  // display current day on page, added current time for scheduling purposes
+  $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm'));
   // listen for save button clicks
   $(".saveBtn").on("click", function() {
 
@@ -77,8 +79,5 @@ $(document).ready(function() {
   $("#hour-20 .description").val(localStorage.getItem("hour-20"));
   $("#hour-21 .description").val(localStorage.getItem("hour-21"));
   $("#hour-22 .description").val(localStorage.getItem("hour-22"));
-  $("#hour-23 .description").val(localStorage.getItem("hour-23"));
-
-  // display current day on page, added current time for scheduling purposes
-  $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+  $("#hour-23 .description").val(localStorage.getItem("hour-23")); 
 });
